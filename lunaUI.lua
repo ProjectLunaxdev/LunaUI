@@ -2097,7 +2097,7 @@ getgenv().LunaLibrary = Library
 	function TabWrap:BottomSelector(opts)
 		opts = opts or {}
 		local name = (self._configPrefix and (self._configPrefix .. " ") or "") .. "Actions"
-		local nativeGroup = self._native:AddGroup(name, 2)
+		local nativeGroup = self._native:AddGroup(name, opts.Column or 2)
 		local dropdown = nativeGroup:AddDropdown({
 			Options = opts.Options or {},
 			Default = opts.Default or (opts.Options and opts.Options[1]),
